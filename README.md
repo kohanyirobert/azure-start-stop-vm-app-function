@@ -8,6 +8,8 @@ See [related guide](https://learn.microsoft.com/en-us/azure/azure-functions/func
 
 ## Usage
 
+Configure `AZURE_SUBSCRIPTION_ID` environment variable for the function to specify which Azure subscription to use.
+
 After deployment send GET HTTP requests to the endpoint. During local development something like the following:
 
 ```
