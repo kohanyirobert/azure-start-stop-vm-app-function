@@ -29,8 +29,8 @@ public class StartStopVMHttpTrigger
     {
         _logger.LogDebug("Starting");
 
-        var vmName = req.Query["name"].ToString();
-        var opName = req.Query["operation"].ToString() ?? "start";
+        var vmName = req.Query["name"];
+        var opName = req.Query["operation"];
         _logger.LogDebug($"Request parameters: name={vmName}, operation={opName}");
 
         if (string.IsNullOrEmpty(vmName))
@@ -41,8 +41,8 @@ public class StartStopVMHttpTrigger
 
         if (string.IsNullOrEmpty(opName))
         {
-            _logger.LogError("Operation name is not provided in the query string.");
-            return new BadRequestObjectResult("Operation name is required.");
+            _logger.LogDebug("Operation name is not provided assuming 'start' by default.");
+            opName = "start";
         }
 
         if (opName != "start" && opName != "stop")
