@@ -4,7 +4,7 @@ Simple function that allows to start and stop already existing VMs in an Azure s
 
 See [related guide](https://learn.microsoft.com/en-us/azure/azure-functions/functions-get-started) on how to deploy and develop.
 
-**Note**: deploy using managed identity.
+**Note**: deploy using ***system*** managed identity, user managed identity didn't work for some reason (credentials not found in the cloud).
 
 ## Usage
 
