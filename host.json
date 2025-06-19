@@ -8,8 +8,12 @@
             },
             "enableLiveMetricsFilters": true
         },
+        "fileLoggingMode": "debugOnly",
         "logLevel": {
-            "default": "Debug"
+            "default": "Information",
+            "Host.Aggregator": "Trace",
+            "Host.Results": "Information",
+            "Function": "Debug"
         }
     }
 }
