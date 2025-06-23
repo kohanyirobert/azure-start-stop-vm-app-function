@@ -103,9 +103,9 @@ public class StartStopVMHttpTrigger
 
         if (opName == "stop")
         {
-            _logger.LogDebug("Stopping virtual machine...");
-            vm.PowerOff(Azure.WaitUntil.Started);
-            _logger.LogDebug("Stopped");
+            _logger.LogDebug("Deallocating virtual machine...");
+            vm.Deallocate(Azure.WaitUntil.Started);
+            _logger.LogDebug("Deallocated");
         }
         else if (opName == "start")
         {
